@@ -11,7 +11,7 @@ spec:
     repoURL: 'https://github.com/SergeyHudinskiy/app-of-apps-example.git'
     targetRevision: main
   destination:
-    namespace: my-apps
+    namespace: default
     server: 'https://kubernetes.default.svc'
   project: default
   syncPolicy:
