@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-db
+spec:
+  containers:
+  - name: main-container
+    image: nginxxx
+    ports:
+    - containerPort: 80
