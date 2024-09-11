@@ -8,7 +8,7 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/health/#argocd-app
 
 1 In OpenShift GitOps **argocd-cm** ConfigMap is managed by ArgoCD object named **openshift-gitops**.
 
-  1.1 Run the following command to edit the object
+- 1.1 Run the following command to edit the object
 ```
 $: oc -n openshift-gitops edit  argocd openshift-gitops
 
