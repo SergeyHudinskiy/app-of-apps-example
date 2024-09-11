@@ -38,9 +38,9 @@ spec:
 # How to test the behavior
 
 1 Run the following command:
-'''
+```
 $: oc apply -f app-of-apps.yaml
-'''
+```
 
 2. Expected:
   
