@@ -8,12 +8,12 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/health/#argocd-app
 
 1 In OpenShift GitOps **argocd-cm** ConfigMap is managed by ArgoCD object named **openshift-gitops**.
 
-1.1 Run the following command to edit the object
+  1.1 Run the following command to edit the object
 ```
 $: oc -n openshift-gitops edit  argocd openshift-gitops
 
 ```
-1.2 Add the following lines into the ArgocCD object based on the info from the Note above:
+  1.2 Add the following lines into the ArgocCD object based on the info from the Note above:
 ```
 ...
 spec:
@@ -35,7 +35,7 @@ spec:
           return hs
 ...
 ```
-### How to test the behavior
+# How to test the behavior
 
 1 Run the following command:
 '''
@@ -44,5 +44,9 @@ $: oc apply -f app-of-apps.yaml
 
 2 Expected:
   
-  2.1 
+  2.1 **Backend** ArgoCD Application is not created, due to the following:
+      - **Database** ArgoCD Application has annotation `argocd.argoproj.io/sync-wave: "1"` and  pod has the incorrect image `nginxxx`
+      - **Backend** ArgocCD Application has annotation `argocd.argoproj.io/sync-wave: "2"`
 
+3 Change the image for the **Database** pod from `nginxxx` to `nginx`
+4 **Backend** ArgocCD Application is created
