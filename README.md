@@ -17,7 +17,7 @@ $: oc -n openshift-gitops edit  argocd openshift-gitops
 ```
 ...
 spec:
-**extraConfig:**
+  extraConfig:
     resource.customizations: |
       argoproj.io/Application:
         health.lua: |
