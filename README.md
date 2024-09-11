@@ -45,8 +45,10 @@ $: oc apply -f app-of-apps.yaml
 2. Expected:
   
 - 2.1 **Backend** ArgoCD Application is not created, due to the following:
-      - **Database** ArgoCD Application has annotation `argocd.argoproj.io/sync-wave: "1"` and  pod has the incorrect image `nginxxx`
-      - **Backend** ArgocCD Application has annotation `argocd.argoproj.io/sync-wave: "2"`
+
+  - **Database** ArgoCD Application has annotation `argocd.argoproj.io/sync-wave: "1"` and  pod has the incorrect image `nginxxx`
+
+  - **Backend** ArgocCD Application has annotation `argocd.argoproj.io/sync-wave: "2"`
 
 3 Change the image for the **Database** pod from `nginxxx` to `nginx`
 
