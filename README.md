@@ -1,4 +1,4 @@
-# app-of-apps-example
+# app-of-apps-example with sync waves
 
 # How to restore the health assessment of argoproj.io/Application CRD
 
