@@ -49,4 +49,5 @@ $: oc apply -f app-of-apps.yaml
       - **Backend** ArgocCD Application has annotation `argocd.argoproj.io/sync-wave: "2"`
 
 3 Change the image for the **Database** pod from `nginxxx` to `nginx`
+
 4 **Backend** ArgocCD Application is created
